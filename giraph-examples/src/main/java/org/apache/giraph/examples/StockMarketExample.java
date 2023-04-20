@@ -47,7 +47,7 @@ public class StockMarketExample extends BasicComputation<
     public final static double priceAdjustmentFactor = 0.01;
     public final static double interestRate = 0.0001;
     public final static int cfreq = 1; 
-    private static final int stockLength = 300; 
+    private static final int stockLength = 210; 
     Random r = new Random();
 
     int update(int window, int timer, double lastAvg, double[] stock_timeseries) {
@@ -79,13 +79,10 @@ public class StockMarketExample extends BasicComputation<
     }
     
     double[] evalRule(int rule, double stockPrice, double[] marketState, double cash, double shares) {
-        double lastDividend = marketState[0];
-        double lastAvg = marketState[1];
-        double currentPrice = marketState[2];
-        double dividendIncrease = marketState[3];
-        double recent10AvgInc = marketState[4];
-        double recent50AvgInc = marketState[5];  
-        double recent100AvgInc = marketState[6];    
+        double dividendIncrease = marketState[0];
+        double recent10AvgInc = marketState[1];
+        double recent50AvgInc = marketState[2];  
+        double recent100AvgInc = marketState[3];    
 
         double action = 0;
         double buy = 1;
@@ -158,8 +155,10 @@ public class StockMarketExample extends BasicComputation<
           // time series of stock price
           DoubleWritable stockTimeseries[] = new DoubleWritable[stockLength];
           for (int i = 0; i < stockLength; i++){
-            stockTimeseries[i] = new DoubleWritable(r.nextDouble());
+            stockTimeseries[i] = new DoubleWritable(0);
           }
+          // Initially the price is 100
+          stockTimeseries[0] = new DoubleWritable(100);
           // stockTimeseries[0] = new DoubleWritable(0);
           agentStates[0] = new DoubleArrayWritable(stockTimeseries);
           // last dividend
@@ -186,7 +185,7 @@ public class StockMarketExample extends BasicComputation<
           wealthTS[2] = new DoubleWritable(0);
           agentStates[3] = new DoubleArrayWritable(wealthTS); 
           // rules (5 rules and their respective strength, initially 0)
-          DoubleWritable rules[] = new DoubleWritable[11];
+          DoubleWritable rules[] = new DoubleWritable[7];
           rules[0] = new DoubleWritable(0);
           rules[1] = new DoubleWritable(0); 
           rules[2] = new DoubleWritable(0);
@@ -210,25 +209,23 @@ public class StockMarketExample extends BasicComputation<
         double sellOrders = 0;
         double dividendPerShare = 0;
 
-        int dividendIncrease=0;
-        int recent10AvgInc=0;
-        int recent50AvgInc=0;
-        int recent100AvgInc=0;
+        double dividendIncrease=0;
+        double recent10AvgInc=currentPrice;
+        double recent50AvgInc=currentPrice;
+        double recent100AvgInc=currentPrice;
 
-        // Assume fixed 100 items values
         double prices[] = new double[stockLength]; 
-        double traderStates[] = new double[3];
         double cash; 
         double shares; 
         double lastEstimatedWealth; 
         double estimatedWealth = 1000;
-        double decodedRules[] = new double[5];
         int lastRule = 0;
         int receivedMsg = 0;
 
         for (int i = 0; i < stockLength; i++){
           prices[i] = ((DoubleWritable) agentStates[0].get()[i]).get();
         }
+
         lastDividend = ((DoubleWritable)agentStates[1].get()[0]).get();
         lastAvg = ((DoubleWritable)agentStates[1].get()[1]).get();
         currentPrice = ((DoubleWritable)agentStates[1].get()[2]).get();
@@ -236,7 +233,7 @@ public class StockMarketExample extends BasicComputation<
         cash = ((DoubleWritable)agentStates[3].get()[0]).get();
         shares = ((DoubleWritable)agentStates[3].get()[1]).get();
         lastEstimatedWealth = ((DoubleWritable)agentStates[3].get()[2]).get();
-        lastRule = (int)((DoubleWritable)agentStates[4].get()[10]).get();
+        lastRule = (int)((DoubleWritable)agentStates[4].get()[5]).get();
         int totalMsg = 0;
 
         if (getSuperstep() < 200){
@@ -287,7 +284,7 @@ public class StockMarketExample extends BasicComputation<
 
             // println("Market state is " + List(dividendIncrease, recent10AvgInc, recent50AvgInc))
             // Market state encodes both short-term and long-term information
-            DoubleWritable marketState[] = new DoubleWritable[5];  
+            DoubleWritable marketState[] = new DoubleWritable[7]; 
             // update market info
             marketState[0] = new DoubleWritable(lastDividend);
             marketState[1] = new DoubleWritable(lastAvg);
@@ -321,67 +318,45 @@ public class StockMarketExample extends BasicComputation<
               if (((DoubleWritable)m.get()[0]).get()!=-1) {
               double localPrice = ((DoubleWritable)m.get()[0]).get();
               double localDividend = ((DoubleWritable)m.get()[1]).get();
-              dividendIncrease = (int)((DoubleWritable) m.get()[2]).get();
-              recent10AvgInc = (int)((DoubleWritable)m.get()[3]).get();
-              recent50AvgInc = (int)((DoubleWritable)m.get()[4]).get();
-              recent100AvgInc = (int)((DoubleWritable)m.get()[5]).get();
+              dividendIncrease = ((DoubleWritable) m.get()[2]).get();
+              recent10AvgInc = ((DoubleWritable)m.get()[3]).get();
+              recent50AvgInc = ((DoubleWritable)m.get()[4]).get();
+              recent100AvgInc = ((DoubleWritable)m.get()[5]).get();
 
               shares = shares * (1 + localDividend);
               
               estimatedWealth = cash + shares * localPrice; 
 
-              int marketState[] = new int[4];
+              double marketState[] = new double[4];
               marketState[0] = dividendIncrease;
               marketState[1] = recent10AvgInc;
               marketState[2] = recent50AvgInc;
               marketState[3] = recent100AvgInc;
 
               // if the total estimated wealth has increased, then the strength of the rule increases by 1
-              double lastStrength = ((DoubleWritable)agentStates[4].get()[lastRule*2+1]).get();
+              double lastStrength = ((DoubleWritable)agentStates[4].get()[lastRule]).get();
               if (estimatedWealth > lastEstimatedWealth) {
                 // update the strength of the last rule 
-                lastStrength += 1;
+                agentStates[4].get()[lastRule] = new DoubleWritable(lastStrength + 1);
               } else {
-                lastStrength -= 1;
+                agentStates[4].get()[lastRule] = new DoubleWritable(lastStrength - 1);
               }
 
               double maxStrength = 0;
               int nextRule = 0; 
               // select the rule with the strongest strength
               for (int i=0; i< 5; i++) {
-                double strength = ((DoubleWritable)agentStates[4].get()[i*2+1]).get();
+                double strength = ((DoubleWritable)agentStates[4].get()[i]).get();
                 if (strength > maxStrength) {
                   maxStrength = strength; 
                   nextRule = i;
                 } 
               }
 
-              // ((DoubleWritable)agentStates[4].get()[10]) = new DoubleWritable((double)nextRule);
-
-              // Simulate the computation of rule-related actions with 20 instructions 
-              for (int i=0; i<40; i++) {
-                action = action * 13 + 4;
-              }
-
-              if (r.nextBoolean()) {
-                action = 1; 
-              } else {
-                action = 2; 
-              }
-
-              double actions[] = new double[11]; 
-              for (int i = 0; i < 11; i++){
-                actions[i] = ((DoubleWritable) agentStates[4].get()[i]).get();
-              }
-
-              actions[10] = nextRule; 
-              actions[lastRule*2+1] += 1; 
-
-              DoubleWritable localActions[] = new DoubleWritable[11];
-              for (int i=0; i < 11; i++) {
-                  localActions[i] = new DoubleWritable(actions[i]);
-              }
-              agentStates[4] = new DoubleArrayWritable(localActions);
+              double evaluatedRules[] = evalRule(nextRule, currentPrice, marketState, cash, shares);
+              agentStates[4].get()[6] = new DoubleWritable(evaluatedRules[0]);
+              estimatedWealth = evaluatedRules[1];
+              shares = evaluatedRules[2];
             } 
             if (receivedMsg > 0) {
               for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
@@ -400,8 +375,8 @@ public class StockMarketExample extends BasicComputation<
           }
 
           // time series of stock price
-          DoubleWritable stockTimeseries[] = new DoubleWritable[100];
-          for (int i=0; i < 100; i++) {
+          DoubleWritable stockTimeseries[] = new DoubleWritable[stockLength];
+          for (int i=0; i < stockLength; i++) {
               stockTimeseries[i] = new DoubleWritable(prices[i]);
           }
           agentStates[0] = new DoubleArrayWritable(stockTimeseries);
@@ -423,10 +398,6 @@ public class StockMarketExample extends BasicComputation<
           wealthTS[1] = new DoubleWritable(shares);
           wealthTS[2] = new DoubleWritable(estimatedWealth);
           agentStates[3] = new DoubleArrayWritable(wealthTS); 
-          // rule
-          // DoubleWritable rules[] = new DoubleWritable[1];
-          // rules[0] = new DoubleWritable(rule);
-          // agentStates[4] = new DoubleArrayWritable(rules);
 
           vertex.setValue(new ArrayDoubleArrayWritable(agentStates));
         }

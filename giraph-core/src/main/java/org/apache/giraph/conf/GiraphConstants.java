@@ -829,7 +829,7 @@ public interface GiraphConstants {
 
   /** Number of threads for vertex computation */
   IntConfOption NUM_COMPUTE_THREADS =
-      new IntConfOption("giraph.numComputeThreads", 100,
+      new IntConfOption("giraph.numComputeThreads", 50,
           "Number of threads for vertex computation");
 
   /** Number of threads for input split loading */
