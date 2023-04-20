@@ -1,0 +1,75 @@
+# GameOfLife
+23/04/20 10:29:51 INFO mapred.JobClient:     Total (ms)=13782
+23/04/20 10:30:28 INFO mapred.JobClient:     Total (ms)=14360
+23/04/20 10:31:04 INFO mapred.JobClient:     Total (ms)=13916
+23/04/20 10:31:40 INFO mapred.JobClient:     Total (ms)=14775
+23/04/20 10:32:20 INFO mapred.JobClient:     Total (ms)=17573
+
+23/04/20 10:34:46 INFO mapred.JobClient:     Total (ms)=13329
+23/04/20 10:35:23 INFO mapred.JobClient:     Total (ms)=14528
+23/04/20 10:36:00 INFO mapred.JobClient:     Total (ms)=13932
+23/04/20 10:36:38 INFO mapred.JobClient:     Total (ms)=15832
+23/04/20 10:37:17 INFO mapred.JobClient:     Total (ms)=17310
+
+23/04/20 10:39:43 INFO mapred.JobClient:     Total (ms)=13577
+23/04/20 10:40:18 INFO mapred.JobClient:     Total (ms)=13913
+23/04/20 10:40:55 INFO mapred.JobClient:     Total (ms)=14084
+23/04/20 10:41:32 INFO mapred.JobClient:     Total (ms)=15160
+23/04/20 10:42:12 INFO mapred.JobClient:     Total (ms)=17978
+
+# Stock market
+23/04/20 11:21:19 INFO mapred.JobClient:     Total (ms)=14080
+23/04/20 11:21:57 INFO mapred.JobClient:     Total (ms)=16602
+23/04/20 11:22:40 INFO mapred.JobClient:     Total (ms)=20309
+23/04/20 11:23:44 INFO mapred.JobClient:     Total (ms)=40993
+23/04/20 11:25:26 INFO mapred.JobClient:     Total (ms)=80219
+
+23/04/20 11:28:43 INFO mapred.JobClient:     Total (ms)=14315
+23/04/20 11:29:22 INFO mapred.JobClient:     Total (ms)=16886
+23/04/20 11:30:04 INFO mapred.JobClient:     Total (ms)=20279
+23/04/20 11:31:08 INFO mapred.JobClient:     Total (ms)=41609
+23/04/20 11:32:48 INFO mapred.JobClient:     Total (ms)=78073
+
+23/04/20 11:36:06 INFO mapred.JobClient:     Total (ms)=14572
+23/04/20 11:36:44 INFO mapred.JobClient:     Total (ms)=16723
+23/04/20 11:37:26 INFO mapred.JobClient:     Total (ms)=20419
+23/04/20 11:38:30 INFO mapred.JobClient:     Total (ms)=41956
+23/04/20 11:40:10 INFO mapred.JobClient:     Total (ms)=78382
+
+# ERM
+23/04/20 12:09:18 INFO mapred.JobClient:     Total (ms)=10889
+23/04/20 12:09:54 INFO mapred.JobClient:     Total (ms)=12946
+23/04/20 12:10:32 INFO mapred.JobClient:     Total (ms)=15803
+23/04/20 12:12:26 INFO mapred.JobClient:     Total (ms)=92651
+23/04/20 12:17:52 INFO mapred.JobClient:     Total (ms)=303837
+
+23/04/20 12:18:25 INFO mapred.JobClient:     Total (ms)=11020
+23/04/20 12:19:00 INFO mapred.JobClient:     Total (ms)=12726
+23/04/20 12:19:38 INFO mapred.JobClient:     Total (ms)=15695
+23/04/20 12:21:29 INFO mapred.JobClient:     Total (ms)=88133
+23/04/20 12:26:56 INFO mapred.JobClient:     Total (ms)=304303
+
+23/04/20 12:27:29 INFO mapred.JobClient:     Total (ms)=10833
+23/04/20 12:28:04 INFO mapred.JobClient:     Total (ms)=12905
+23/04/20 12:28:42 INFO mapred.JobClient:     Total (ms)=15808
+23/04/20 12:30:35 INFO mapred.JobClient:     Total (ms)=90005
+23/04/20 12:36:03 INFO mapred.JobClient:     Total (ms)=304772
+
+# SBM
+23/04/20 16:55:24 INFO mapred.JobClient:     Total (ms)=10784
+23/04/20 16:55:58 INFO mapred.JobClient:     Total (ms)=12155
+23/04/20 16:56:33 INFO mapred.JobClient:     Total (ms)=12537
+23/04/20 16:57:24 INFO mapred.JobClient:     Total (ms)=29106
+23/04/20 16:58:59 INFO mapred.JobClient:     Total (ms)=74628
+
+23/04/20 16:59:32 INFO mapred.JobClient:     Total (ms)=10988
+23/04/20 17:00:06 INFO mapred.JobClient:     Total (ms)=11495
+23/04/20 17:00:42 INFO mapred.JobClient:     Total (ms)=12659
+23/04/20 17:01:33 INFO mapred.JobClient:     Total (ms)=29363
+23/04/20 17:03:10 INFO mapred.JobClient:     Total (ms)=74490
+
+23/04/20 17:03:43 INFO mapred.JobClient:     Total (ms)=10947
+23/04/20 17:04:17 INFO mapred.JobClient:     Total (ms)=11539
+23/04/20 17:04:52 INFO mapred.JobClient:     Total (ms)=12669
+23/04/20 17:05:42 INFO mapred.JobClient:     Total (ms)=29627
+23/04/20 17:07:20 INFO mapred.JobClient:     Total (ms)=75989

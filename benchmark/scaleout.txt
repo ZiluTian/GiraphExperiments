@@ -1,0 +1,51 @@
+# GameOfLife
+log/gol_scaleout_1:23/04/20 17:46:29 INFO mapred.JobClient:     Total (ms)=15068
+log/gol_scaleout_1:23/04/20 17:47:06 INFO mapred.JobClient:     Total (ms)=15329
+log/gol_scaleout_1:23/04/20 17:47:43 INFO mapred.JobClient:     Total (ms)=14959
+
+log/gol_scaleout_2:23/04/20 17:48:21 INFO mapred.JobClient:     Total (ms)=15386
+log/gol_scaleout_2:23/04/20 17:48:58 INFO mapred.JobClient:     Total (ms)=14948
+log/gol_scaleout_2:23/04/20 17:49:37 INFO mapred.JobClient:     Total (ms)=14223
+
+log/gol_scaleout_3:23/04/20 17:50:14 INFO mapred.JobClient:     Total (ms)=15468
+log/gol_scaleout_3:23/04/20 17:50:53 INFO mapred.JobClient:     Total (ms)=15617
+log/gol_scaleout_3:23/04/20 17:51:31 INFO mapred.JobClient:     Total (ms)=14383
+
+# Stock market
+log/stockMarket_scaleout_1:23/04/20 17:38:38 INFO mapred.JobClient:     Total (ms)=22534
+log/stockMarket_scaleout_1:23/04/20 17:39:25 INFO mapred.JobClient:     Total (ms)=23787
+log/stockMarket_scaleout_1:23/04/20 17:40:12 INFO mapred.JobClient:     Total (ms)=24136
+
+log/stockMarket_scaleout_2:23/04/20 17:40:58 INFO mapred.JobClient:     Total (ms)=22423
+log/stockMarket_scaleout_2:23/04/20 17:41:46 INFO mapred.JobClient:     Total (ms)=23439
+log/stockMarket_scaleout_2:23/04/20 17:42:32 INFO mapred.JobClient:     Total (ms)=23580
+
+log/stockMarket_scaleout_3:23/04/20 17:43:16 INFO mapred.JobClient:     Total (ms)=22040
+log/stockMarket_scaleout_3:23/04/20 17:44:02 INFO mapred.JobClient:     Total (ms)=23176
+log/stockMarket_scaleout_3:23/04/20 17:44:48 INFO mapred.JobClient:     Total (ms)=23224
+
+# ERM
+log/ERM_scaleout_1:23/04/20 17:30:19 INFO mapred.JobClient:     Total (ms)=20856
+log/ERM_scaleout_1:23/04/20 17:31:07 INFO mapred.JobClient:     Total (ms)=25150
+log/ERM_scaleout_1:23/04/20 17:31:57 INFO mapred.JobClient:     Total (ms)=28052
+
+log/ERM_scaleout_2:23/04/20 17:32:41 INFO mapred.JobClient:     Total (ms)=21428
+log/ERM_scaleout_2:23/04/20 17:33:29 INFO mapred.JobClient:     Total (ms)=25132
+log/ERM_scaleout_2:23/04/20 17:34:21 INFO mapred.JobClient:     Total (ms)=28957
+
+log/ERM_scaleout_3:23/04/20 17:35:04 INFO mapred.JobClient:     Total (ms)=20889
+log/ERM_scaleout_3:23/04/20 17:35:53 INFO mapred.JobClient:     Total (ms)=25055
+log/ERM_scaleout_3:23/04/20 17:36:43 INFO mapred.JobClient:     Total (ms)=27946
+
+# SBM
+log/SBM_scaleout_1:23/04/20 17:20:57 INFO mapred.JobClient:     Total (ms)=16854
+log/SBM_scaleout_1:23/04/20 17:21:37 INFO mapred.JobClient:     Total (ms)=17876
+log/SBM_scaleout_1:23/04/20 17:22:19 INFO mapred.JobClient:     Total (ms)=18620
+
+log/SBM_scaleout_2:23/04/20 17:22:58 INFO mapred.JobClient:     Total (ms)=16867
+log/SBM_scaleout_2:23/04/20 17:23:38 INFO mapred.JobClient:     Total (ms)=18416
+log/SBM_scaleout_2:23/04/20 17:24:19 INFO mapred.JobClient:     Total (ms)=17668
+
+log/SBM_scaleout_3:23/04/20 17:24:57 INFO mapred.JobClient:     Total (ms)=16643
+log/SBM_scaleout_3:23/04/20 17:25:38 INFO mapred.JobClient:     Total (ms)=18029
+log/SBM_scaleout_3:23/04/20 17:26:19 INFO mapred.JobClient:     Total (ms)=18378

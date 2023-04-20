@@ -1,4 +1,5 @@
-*.txt
+.vscode/*
+.metals/*
+src/site/*
 *.class
 **/target/*
-

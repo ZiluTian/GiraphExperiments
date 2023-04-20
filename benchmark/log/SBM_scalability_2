@@ -1,0 +1,586 @@
+Warning: $HADOOP_HOME is deprecated.
+
+23/04/20 16:59:07 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+23/04/20 16:59:07 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+23/04/20 16:59:07 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 1, old value = 4)
+23/04/20 16:59:08 INFO job.GiraphJob: Tracking URL: http://ic057:50030/jobdetails.jsp?jobid=job_202304191742_0167
+23/04/20 16:59:08 INFO job.GiraphJob: Waiting for resources... Job will start only when it gets all 2 mappers
+23/04/20 16:59:26 INFO job.HaltApplicationUtils$DefaultHaltInstructionsWriter: writeHaltInstructions: To halt after next superstep execute: 'bin/halt-application --zkServer ic058:22181 --zkNode /_hadoopBsp/job_202304191742_0167/_haltComputation'
+23/04/20 16:59:26 INFO mapred.JobClient: Running job: job_202304191742_0167
+23/04/20 16:59:27 INFO mapred.JobClient:  map 100% reduce 0%
+23/04/20 16:59:32 INFO mapred.JobClient: Job complete: job_202304191742_0167
+23/04/20 16:59:32 INFO mapred.JobClient: Counters: 94
+23/04/20 16:59:32 INFO mapred.JobClient:   Map-Reduce Framework
+23/04/20 16:59:32 INFO mapred.JobClient:     Spilled Records=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=14788370432
+23/04/20 16:59:32 INFO mapred.JobClient:     Map input records=2
+23/04/20 16:59:32 INFO mapred.JobClient:     SPLIT_RAW_BYTES=88
+23/04/20 16:59:32 INFO mapred.JobClient:     Map output records=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Physical memory (bytes) snapshot=1252945920
+23/04/20 16:59:32 INFO mapred.JobClient:     CPU time spent (ms)=18060
+23/04/20 16:59:32 INFO mapred.JobClient:     Total committed heap usage (bytes)=3306160128
+23/04/20 16:59:32 INFO mapred.JobClient:   Zookeeper halt node
+23/04/20 16:59:32 INFO mapred.JobClient:     /_hadoopBsp/job_202304191742_0167/_haltComputation=0
+23/04/20 16:59:32 INFO mapred.JobClient:   Zookeeper server:port
+23/04/20 16:59:32 INFO mapred.JobClient:     ic058:22181=0
+23/04/20 16:59:32 INFO mapred.JobClient:   Giraph Timers
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 5 EpidemicExampleClock (ms)=57
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 31 EpidemicExampleClock (ms)=19
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 39 EpidemicExampleClock (ms)=16
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 20 EpidemicExampleClock (ms)=21
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 28 EpidemicExampleClock (ms)=20
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 17 EpidemicExampleClock (ms)=25
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 42 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 6 EpidemicExampleClock (ms)=43
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 32 EpidemicExampleClock (ms)=19
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 21 EpidemicExampleClock (ms)=23
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 29 EpidemicExampleClock (ms)=24
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 18 EpidemicExampleClock (ms)=24
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 10 EpidemicExampleClock (ms)=33
+23/04/20 16:59:32 INFO mapred.JobClient:     Input superstep (ms)=356
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 43 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 7 EpidemicExampleClock (ms)=38
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 33 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 40 EpidemicExampleClock (ms)=19
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 48 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 26 EpidemicExampleClock (ms)=27
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 11 EpidemicExampleClock (ms)=31
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 8 EpidemicExampleClock (ms)=34
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 34 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 41 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 49 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 0 EpidemicExampleClock (ms)=94
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 27 EpidemicExampleClock (ms)=20
+23/04/20 16:59:32 INFO mapred.JobClient:     Total (ms)=10988
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 12 EpidemicExampleClock (ms)=32
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 19 EpidemicExampleClock (ms)=23
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 9 EpidemicExampleClock (ms)=34
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 35 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 1 EpidemicExampleClock (ms)=74
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 24 EpidemicExampleClock (ms)=24
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 46 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 13 EpidemicExampleClock (ms)=28
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 36 EpidemicExampleClock (ms)=20
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 25 EpidemicExampleClock (ms)=23
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 50 EpidemicExampleClock (ms)=20
+23/04/20 16:59:32 INFO mapred.JobClient:     Initialize (ms)=4133
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 47 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 14 EpidemicExampleClock (ms)=26
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 2 EpidemicExampleClock (ms)=56
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 37 EpidemicExampleClock (ms)=18
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 3 EpidemicExampleClock (ms)=57
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 44 EpidemicExampleClock (ms)=19
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 15 EpidemicExampleClock (ms)=24
+23/04/20 16:59:32 INFO mapred.JobClient:     Shutdown (ms)=9168
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 22 EpidemicExampleClock (ms)=26
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 4 EpidemicExampleClock (ms)=54
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 30 EpidemicExampleClock (ms)=21
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 38 EpidemicExampleClock (ms)=17
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 45 EpidemicExampleClock (ms)=19
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 16 EpidemicExampleClock (ms)=25
+23/04/20 16:59:32 INFO mapred.JobClient:     Setup (ms)=28
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep 23 EpidemicExampleClock (ms)=23
+23/04/20 16:59:32 INFO mapred.JobClient:   VERTEX input
+23/04/20 16:59:32 INFO mapred.JobClient:     100.00% done time (ms)=263
+23/04/20 16:59:32 INFO mapred.JobClient:   File Input Format Counters 
+23/04/20 16:59:32 INFO mapred.JobClient:     Bytes Read=0
+23/04/20 16:59:32 INFO mapred.JobClient:   Netty counters
+23/04/20 16:59:32 INFO mapred.JobClient:     Network requests resent for channel failure=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Network requests resent for timeout=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Network requests resent for connection or request failure=0
+23/04/20 16:59:32 INFO mapred.JobClient:   Giraph Stats
+23/04/20 16:59:32 INFO mapred.JobClient:     Aggregate bytes stored to local disks (out-of-core)=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Aggregate finished vertices=1001
+23/04/20 16:59:32 INFO mapred.JobClient:     Aggregate edges=2957
+23/04/20 16:59:32 INFO mapred.JobClient:     Current master task partition=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Superstep=51
+23/04/20 16:59:32 INFO mapred.JobClient:     Aggregate sent message bytes=831905
+23/04/20 16:59:32 INFO mapred.JobClient:     Aggregate vertices=1001
+23/04/20 16:59:32 INFO mapred.JobClient:     Aggregate bytes loaded from local disks (out-of-core)=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Sent messages=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Sent message bytes=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Current workers=1
+23/04/20 16:59:32 INFO mapred.JobClient:     Last checkpointed superstep=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Aggregate sent messages=50328
+23/04/20 16:59:32 INFO mapred.JobClient:     Lowest percentage of graph in memory so far (out-of-core)=100
+23/04/20 16:59:32 INFO mapred.JobClient:   FileSystemCounters
+23/04/20 16:59:32 INFO mapred.JobClient:     HDFS_BYTES_READ=47485
+23/04/20 16:59:32 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=111974
+23/04/20 16:59:32 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=65803
+23/04/20 16:59:32 INFO mapred.JobClient:   Job Counters 
+23/04/20 16:59:32 INFO mapred.JobClient:     Launched map tasks=2
+23/04/20 16:59:32 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+23/04/20 16:59:32 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/04/20 16:59:32 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=30312
+23/04/20 16:59:32 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/04/20 16:59:32 INFO mapred.JobClient:   File Output Format Counters 
+23/04/20 16:59:32 INFO mapred.JobClient:     Bytes Written=0
+Warning: $HADOOP_HOME is deprecated.
+
+23/04/20 16:59:40 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+23/04/20 16:59:40 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+23/04/20 16:59:40 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 1, old value = 4)
+23/04/20 16:59:41 INFO job.GiraphJob: Tracking URL: http://ic057:50030/jobdetails.jsp?jobid=job_202304191742_0168
+23/04/20 16:59:41 INFO job.GiraphJob: Waiting for resources... Job will start only when it gets all 2 mappers
+23/04/20 17:00:03 INFO job.HaltApplicationUtils$DefaultHaltInstructionsWriter: writeHaltInstructions: To halt after next superstep execute: 'bin/halt-application --zkServer ic065:22181 --zkNode /_hadoopBsp/job_202304191742_0168/_haltComputation'
+23/04/20 17:00:03 INFO mapred.JobClient: Running job: job_202304191742_0168
+23/04/20 17:00:04 INFO mapred.JobClient:  map 100% reduce 0%
+23/04/20 17:00:06 INFO mapred.JobClient: Job complete: job_202304191742_0168
+23/04/20 17:00:06 INFO mapred.JobClient: Counters: 94
+23/04/20 17:00:06 INFO mapred.JobClient:   Map-Reduce Framework
+23/04/20 17:00:06 INFO mapred.JobClient:     Spilled Records=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=14782124032
+23/04/20 17:00:06 INFO mapred.JobClient:     Map input records=2
+23/04/20 17:00:06 INFO mapred.JobClient:     SPLIT_RAW_BYTES=88
+23/04/20 17:00:06 INFO mapred.JobClient:     Map output records=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Physical memory (bytes) snapshot=1956712448
+23/04/20 17:00:06 INFO mapred.JobClient:     CPU time spent (ms)=36390
+23/04/20 17:00:06 INFO mapred.JobClient:     Total committed heap usage (bytes)=3883925504
+23/04/20 17:00:06 INFO mapred.JobClient:   Zookeeper halt node
+23/04/20 17:00:06 INFO mapred.JobClient:     /_hadoopBsp/job_202304191742_0168/_haltComputation=0
+23/04/20 17:00:06 INFO mapred.JobClient:   Zookeeper server:port
+23/04/20 17:00:06 INFO mapred.JobClient:     ic065:22181=0
+23/04/20 17:00:06 INFO mapred.JobClient:   Giraph Timers
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 5 EpidemicExampleClock (ms)=54
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 31 EpidemicExampleClock (ms)=33
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 39 EpidemicExampleClock (ms)=23
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 20 EpidemicExampleClock (ms)=35
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 28 EpidemicExampleClock (ms)=49
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 17 EpidemicExampleClock (ms)=35
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 42 EpidemicExampleClock (ms)=22
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 6 EpidemicExampleClock (ms)=52
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 32 EpidemicExampleClock (ms)=32
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 21 EpidemicExampleClock (ms)=40
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 29 EpidemicExampleClock (ms)=39
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 18 EpidemicExampleClock (ms)=47
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 10 EpidemicExampleClock (ms)=47
+23/04/20 17:00:06 INFO mapred.JobClient:     Input superstep (ms)=439
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 43 EpidemicExampleClock (ms)=20
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 7 EpidemicExampleClock (ms)=55
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 33 EpidemicExampleClock (ms)=31
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 40 EpidemicExampleClock (ms)=21
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 48 EpidemicExampleClock (ms)=20
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 26 EpidemicExampleClock (ms)=38
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 11 EpidemicExampleClock (ms)=42
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 8 EpidemicExampleClock (ms)=56
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 34 EpidemicExampleClock (ms)=34
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 41 EpidemicExampleClock (ms)=23
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 49 EpidemicExampleClock (ms)=21
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 0 EpidemicExampleClock (ms)=157
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 27 EpidemicExampleClock (ms)=43
+23/04/20 17:00:06 INFO mapred.JobClient:     Total (ms)=11495
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 12 EpidemicExampleClock (ms)=45
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 19 EpidemicExampleClock (ms)=35
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 9 EpidemicExampleClock (ms)=65
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 35 EpidemicExampleClock (ms)=33
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 1 EpidemicExampleClock (ms)=133
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 24 EpidemicExampleClock (ms)=35
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 46 EpidemicExampleClock (ms)=20
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 13 EpidemicExampleClock (ms)=35
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 36 EpidemicExampleClock (ms)=30
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 25 EpidemicExampleClock (ms)=35
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 50 EpidemicExampleClock (ms)=23
+23/04/20 17:00:06 INFO mapred.JobClient:     Initialize (ms)=4149
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 47 EpidemicExampleClock (ms)=19
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 14 EpidemicExampleClock (ms)=41
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 2 EpidemicExampleClock (ms)=66
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 37 EpidemicExampleClock (ms)=36
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 3 EpidemicExampleClock (ms)=60
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 44 EpidemicExampleClock (ms)=21
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 15 EpidemicExampleClock (ms)=32
+23/04/20 17:00:06 INFO mapred.JobClient:     Shutdown (ms)=8915
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 22 EpidemicExampleClock (ms)=43
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 4 EpidemicExampleClock (ms)=57
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 30 EpidemicExampleClock (ms)=38
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 38 EpidemicExampleClock (ms)=23
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 45 EpidemicExampleClock (ms)=20
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 16 EpidemicExampleClock (ms)=35
+23/04/20 17:00:06 INFO mapred.JobClient:     Setup (ms)=31
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep 23 EpidemicExampleClock (ms)=50
+23/04/20 17:00:06 INFO mapred.JobClient:   VERTEX input
+23/04/20 17:00:06 INFO mapred.JobClient:     100.00% done time (ms)=347
+23/04/20 17:00:06 INFO mapred.JobClient:   File Input Format Counters 
+23/04/20 17:00:06 INFO mapred.JobClient:     Bytes Read=0
+23/04/20 17:00:06 INFO mapred.JobClient:   Netty counters
+23/04/20 17:00:06 INFO mapred.JobClient:     Network requests resent for channel failure=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Network requests resent for timeout=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Network requests resent for connection or request failure=0
+23/04/20 17:00:06 INFO mapred.JobClient:   Giraph Stats
+23/04/20 17:00:06 INFO mapred.JobClient:     Aggregate bytes stored to local disks (out-of-core)=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Aggregate finished vertices=5001
+23/04/20 17:00:06 INFO mapred.JobClient:     Aggregate edges=55217
+23/04/20 17:00:06 INFO mapred.JobClient:     Current master task partition=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Superstep=51
+23/04/20 17:00:06 INFO mapred.JobClient:     Aggregate sent message bytes=7835156
+23/04/20 17:00:06 INFO mapred.JobClient:     Aggregate vertices=5001
+23/04/20 17:00:06 INFO mapred.JobClient:     Aggregate bytes loaded from local disks (out-of-core)=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Sent messages=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Sent message bytes=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Current workers=1
+23/04/20 17:00:06 INFO mapred.JobClient:     Last checkpointed superstep=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Aggregate sent messages=453585
+23/04/20 17:00:06 INFO mapred.JobClient:     Lowest percentage of graph in memory so far (out-of-core)=100
+23/04/20 17:00:06 INFO mapred.JobClient:   FileSystemCounters
+23/04/20 17:00:06 INFO mapred.JobClient:     HDFS_BYTES_READ=608767
+23/04/20 17:00:06 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=111974
+23/04/20 17:00:06 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=333295
+23/04/20 17:00:06 INFO mapred.JobClient:   Job Counters 
+23/04/20 17:00:06 INFO mapred.JobClient:     Launched map tasks=2
+23/04/20 17:00:06 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+23/04/20 17:00:06 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/04/20 17:00:06 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=31851
+23/04/20 17:00:06 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/04/20 17:00:06 INFO mapred.JobClient:   File Output Format Counters 
+23/04/20 17:00:06 INFO mapred.JobClient:     Bytes Written=0
+Warning: $HADOOP_HOME is deprecated.
+
+23/04/20 17:00:14 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+23/04/20 17:00:14 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+23/04/20 17:00:14 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 1, old value = 4)
+23/04/20 17:00:15 INFO job.GiraphJob: Tracking URL: http://ic057:50030/jobdetails.jsp?jobid=job_202304191742_0169
+23/04/20 17:00:15 INFO job.GiraphJob: Waiting for resources... Job will start only when it gets all 2 mappers
+23/04/20 17:00:39 INFO job.HaltApplicationUtils$DefaultHaltInstructionsWriter: writeHaltInstructions: To halt after next superstep execute: 'bin/halt-application --zkServer ic057:22181 --zkNode /_hadoopBsp/job_202304191742_0169/_haltComputation'
+23/04/20 17:00:39 INFO mapred.JobClient: Running job: job_202304191742_0169
+23/04/20 17:00:40 INFO mapred.JobClient:  map 100% reduce 0%
+23/04/20 17:00:42 INFO mapred.JobClient: Job complete: job_202304191742_0169
+23/04/20 17:00:42 INFO mapred.JobClient: Counters: 94
+23/04/20 17:00:42 INFO mapred.JobClient:   Map-Reduce Framework
+23/04/20 17:00:42 INFO mapred.JobClient:     Spilled Records=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=14804234240
+23/04/20 17:00:42 INFO mapred.JobClient:     Map input records=2
+23/04/20 17:00:42 INFO mapred.JobClient:     SPLIT_RAW_BYTES=88
+23/04/20 17:00:42 INFO mapred.JobClient:     Map output records=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Physical memory (bytes) snapshot=2347208704
+23/04/20 17:00:42 INFO mapred.JobClient:     CPU time spent (ms)=63630
+23/04/20 17:00:42 INFO mapred.JobClient:     Total committed heap usage (bytes)=4109893632
+23/04/20 17:00:42 INFO mapred.JobClient:   Zookeeper halt node
+23/04/20 17:00:42 INFO mapred.JobClient:     /_hadoopBsp/job_202304191742_0169/_haltComputation=0
+23/04/20 17:00:42 INFO mapred.JobClient:   Zookeeper server:port
+23/04/20 17:00:42 INFO mapred.JobClient:     ic057:22181=0
+23/04/20 17:00:42 INFO mapred.JobClient:   Giraph Timers
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 5 EpidemicExampleClock (ms)=55
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 31 EpidemicExampleClock (ms)=36
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 39 EpidemicExampleClock (ms)=26
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 20 EpidemicExampleClock (ms)=98
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 28 EpidemicExampleClock (ms)=58
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 17 EpidemicExampleClock (ms)=108
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 42 EpidemicExampleClock (ms)=35
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 6 EpidemicExampleClock (ms)=56
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 32 EpidemicExampleClock (ms)=33
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 21 EpidemicExampleClock (ms)=108
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 29 EpidemicExampleClock (ms)=47
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 18 EpidemicExampleClock (ms)=85
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 10 EpidemicExampleClock (ms)=58
+23/04/20 17:00:42 INFO mapred.JobClient:     Input superstep (ms)=646
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 43 EpidemicExampleClock (ms)=26
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 7 EpidemicExampleClock (ms)=58
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 33 EpidemicExampleClock (ms)=32
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 40 EpidemicExampleClock (ms)=26
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 48 EpidemicExampleClock (ms)=25
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 26 EpidemicExampleClock (ms)=67
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 11 EpidemicExampleClock (ms)=69
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 8 EpidemicExampleClock (ms)=69
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 34 EpidemicExampleClock (ms)=30
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 41 EpidemicExampleClock (ms)=27
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 49 EpidemicExampleClock (ms)=25
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 0 EpidemicExampleClock (ms)=214
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 27 EpidemicExampleClock (ms)=64
+23/04/20 17:00:42 INFO mapred.JobClient:     Total (ms)=12659
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 12 EpidemicExampleClock (ms)=72
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 19 EpidemicExampleClock (ms)=109
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 9 EpidemicExampleClock (ms)=69
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 35 EpidemicExampleClock (ms)=31
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 1 EpidemicExampleClock (ms)=91
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 24 EpidemicExampleClock (ms)=99
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 46 EpidemicExampleClock (ms)=23
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 13 EpidemicExampleClock (ms)=66
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 36 EpidemicExampleClock (ms)=26
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 25 EpidemicExampleClock (ms)=75
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 50 EpidemicExampleClock (ms)=32
+23/04/20 17:00:42 INFO mapred.JobClient:     Initialize (ms)=4407
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 47 EpidemicExampleClock (ms)=26
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 14 EpidemicExampleClock (ms)=81
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 2 EpidemicExampleClock (ms)=82
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 37 EpidemicExampleClock (ms)=26
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 3 EpidemicExampleClock (ms)=59
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 44 EpidemicExampleClock (ms)=25
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 15 EpidemicExampleClock (ms)=76
+23/04/20 17:00:42 INFO mapred.JobClient:     Shutdown (ms)=8926
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 22 EpidemicExampleClock (ms)=99
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 4 EpidemicExampleClock (ms)=53
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 30 EpidemicExampleClock (ms)=37
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 38 EpidemicExampleClock (ms)=28
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 45 EpidemicExampleClock (ms)=24
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 16 EpidemicExampleClock (ms)=99
+23/04/20 17:00:42 INFO mapred.JobClient:     Setup (ms)=28
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep 23 EpidemicExampleClock (ms)=105
+23/04/20 17:00:42 INFO mapred.JobClient:   VERTEX input
+23/04/20 17:00:42 INFO mapred.JobClient:     100.00% done time (ms)=559
+23/04/20 17:00:42 INFO mapred.JobClient:   File Input Format Counters 
+23/04/20 17:00:42 INFO mapred.JobClient:     Bytes Read=0
+23/04/20 17:00:42 INFO mapred.JobClient:   Netty counters
+23/04/20 17:00:42 INFO mapred.JobClient:     Network requests resent for channel failure=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Network requests resent for timeout=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Network requests resent for connection or request failure=0
+23/04/20 17:00:42 INFO mapred.JobClient:   Giraph Stats
+23/04/20 17:00:42 INFO mapred.JobClient:     Aggregate bytes stored to local disks (out-of-core)=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Aggregate finished vertices=10001
+23/04/20 17:00:42 INFO mapred.JobClient:     Aggregate edges=209576
+23/04/20 17:00:42 INFO mapred.JobClient:     Current master task partition=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Superstep=51
+23/04/20 17:00:42 INFO mapred.JobClient:     Aggregate sent message bytes=21336844
+23/04/20 17:00:42 INFO mapred.JobClient:     Aggregate vertices=10001
+23/04/20 17:00:42 INFO mapred.JobClient:     Aggregate bytes loaded from local disks (out-of-core)=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Sent messages=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Sent message bytes=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Current workers=1
+23/04/20 17:00:42 INFO mapred.JobClient:     Last checkpointed superstep=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Aggregate sent messages=1293148
+23/04/20 17:00:42 INFO mapred.JobClient:     Lowest percentage of graph in memory so far (out-of-core)=100
+23/04/20 17:00:42 INFO mapred.JobClient:   FileSystemCounters
+23/04/20 17:00:42 INFO mapred.JobClient:     HDFS_BYTES_READ=2112129
+23/04/20 17:00:42 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=111976
+23/04/20 17:00:42 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=667609
+23/04/20 17:00:42 INFO mapred.JobClient:   Job Counters 
+23/04/20 17:00:42 INFO mapred.JobClient:     Launched map tasks=2
+23/04/20 17:00:42 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+23/04/20 17:00:42 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/04/20 17:00:42 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=34519
+23/04/20 17:00:42 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/04/20 17:00:42 INFO mapred.JobClient:   File Output Format Counters 
+23/04/20 17:00:42 INFO mapred.JobClient:     Bytes Written=0
+Warning: $HADOOP_HOME is deprecated.
+
+23/04/20 17:00:49 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+23/04/20 17:00:49 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+23/04/20 17:00:50 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 1, old value = 4)
+23/04/20 17:00:50 INFO job.GiraphJob: Tracking URL: http://ic057:50030/jobdetails.jsp?jobid=job_202304191742_0170
+23/04/20 17:00:50 INFO job.GiraphJob: Waiting for resources... Job will start only when it gets all 2 mappers
+23/04/20 17:01:27 INFO job.HaltApplicationUtils$DefaultHaltInstructionsWriter: writeHaltInstructions: To halt after next superstep execute: 'bin/halt-application --zkServer ic058:22181 --zkNode /_hadoopBsp/job_202304191742_0170/_haltComputation'
+23/04/20 17:01:27 INFO mapred.JobClient: Running job: job_202304191742_0170
+23/04/20 17:01:28 INFO mapred.JobClient:  map 100% reduce 0%
+23/04/20 17:01:33 INFO mapred.JobClient: Job complete: job_202304191742_0170
+23/04/20 17:01:33 INFO mapred.JobClient: Counters: 94
+23/04/20 17:01:33 INFO mapred.JobClient:   Map-Reduce Framework
+23/04/20 17:01:33 INFO mapred.JobClient:     Spilled Records=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=14781657088
+23/04/20 17:01:33 INFO mapred.JobClient:     Map input records=2
+23/04/20 17:01:33 INFO mapred.JobClient:     SPLIT_RAW_BYTES=88
+23/04/20 17:01:33 INFO mapred.JobClient:     Map output records=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Physical memory (bytes) snapshot=3285213184
+23/04/20 17:01:33 INFO mapred.JobClient:     CPU time spent (ms)=602470
+23/04/20 17:01:33 INFO mapred.JobClient:     Total committed heap usage (bytes)=4488429568
+23/04/20 17:01:33 INFO mapred.JobClient:   Zookeeper halt node
+23/04/20 17:01:33 INFO mapred.JobClient:     /_hadoopBsp/job_202304191742_0170/_haltComputation=0
+23/04/20 17:01:33 INFO mapred.JobClient:   Zookeeper server:port
+23/04/20 17:01:33 INFO mapred.JobClient:     ic058:22181=0
+23/04/20 17:01:33 INFO mapred.JobClient:   Giraph Timers
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 5 EpidemicExampleClock (ms)=230
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 31 EpidemicExampleClock (ms)=34
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 39 EpidemicExampleClock (ms)=30
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 20 EpidemicExampleClock (ms)=212
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 28 EpidemicExampleClock (ms)=35
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 17 EpidemicExampleClock (ms)=803
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 42 EpidemicExampleClock (ms)=33
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 6 EpidemicExampleClock (ms)=436
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 32 EpidemicExampleClock (ms)=33
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 21 EpidemicExampleClock (ms)=140
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 29 EpidemicExampleClock (ms)=35
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 18 EpidemicExampleClock (ms)=582
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 10 EpidemicExampleClock (ms)=1012
+23/04/20 17:01:33 INFO mapred.JobClient:     Input superstep (ms)=3735
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 43 EpidemicExampleClock (ms)=33
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 7 EpidemicExampleClock (ms)=645
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 33 EpidemicExampleClock (ms)=36
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 40 EpidemicExampleClock (ms)=46
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 48 EpidemicExampleClock (ms)=32
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 26 EpidemicExampleClock (ms)=39
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 11 EpidemicExampleClock (ms)=1249
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 8 EpidemicExampleClock (ms)=792
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 34 EpidemicExampleClock (ms)=35
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 41 EpidemicExampleClock (ms)=32
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 49 EpidemicExampleClock (ms)=33
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 0 EpidemicExampleClock (ms)=551
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 27 EpidemicExampleClock (ms)=37
+23/04/20 17:01:33 INFO mapred.JobClient:     Total (ms)=29363
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 12 EpidemicExampleClock (ms)=1486
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 19 EpidemicExampleClock (ms)=352
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 9 EpidemicExampleClock (ms)=842
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 35 EpidemicExampleClock (ms)=31
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 1 EpidemicExampleClock (ms)=164
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 24 EpidemicExampleClock (ms)=49
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 46 EpidemicExampleClock (ms)=32
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 13 EpidemicExampleClock (ms)=1596
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 36 EpidemicExampleClock (ms)=29
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 25 EpidemicExampleClock (ms)=43
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 50 EpidemicExampleClock (ms)=51
+23/04/20 17:01:33 INFO mapred.JobClient:     Initialize (ms)=4497
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 47 EpidemicExampleClock (ms)=32
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 14 EpidemicExampleClock (ms)=1494
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 2 EpidemicExampleClock (ms)=154
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 37 EpidemicExampleClock (ms)=31
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 3 EpidemicExampleClock (ms)=144
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 44 EpidemicExampleClock (ms)=33
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 15 EpidemicExampleClock (ms)=1378
+23/04/20 17:01:33 INFO mapred.JobClient:     Shutdown (ms)=9011
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 22 EpidemicExampleClock (ms)=94
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 4 EpidemicExampleClock (ms)=88
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 30 EpidemicExampleClock (ms)=34
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 38 EpidemicExampleClock (ms)=30
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 45 EpidemicExampleClock (ms)=31
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 16 EpidemicExampleClock (ms)=1133
+23/04/20 17:01:33 INFO mapred.JobClient:     Setup (ms)=29
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep 23 EpidemicExampleClock (ms)=59
+23/04/20 17:01:33 INFO mapred.JobClient:   VERTEX input
+23/04/20 17:01:33 INFO mapred.JobClient:     100.00% done time (ms)=3627
+23/04/20 17:01:33 INFO mapred.JobClient:   File Input Format Counters 
+23/04/20 17:01:33 INFO mapred.JobClient:     Bytes Read=0
+23/04/20 17:01:33 INFO mapred.JobClient:   Netty counters
+23/04/20 17:01:33 INFO mapred.JobClient:     Network requests resent for channel failure=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Network requests resent for timeout=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Network requests resent for connection or request failure=0
+23/04/20 17:01:33 INFO mapred.JobClient:   Giraph Stats
+23/04/20 17:01:33 INFO mapred.JobClient:     Aggregate bytes stored to local disks (out-of-core)=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Aggregate finished vertices=50001
+23/04/20 17:01:33 INFO mapred.JobClient:     Aggregate edges=5048176
+23/04/20 17:01:33 INFO mapred.JobClient:     Current master task partition=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Superstep=51
+23/04/20 17:01:33 INFO mapred.JobClient:     Aggregate sent message bytes=362916302
+23/04/20 17:01:33 INFO mapred.JobClient:     Aggregate vertices=50001
+23/04/20 17:01:33 INFO mapred.JobClient:     Aggregate bytes loaded from local disks (out-of-core)=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Sent messages=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Sent message bytes=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Current workers=1
+23/04/20 17:01:33 INFO mapred.JobClient:     Last checkpointed superstep=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Aggregate sent messages=22637035
+23/04/20 17:01:33 INFO mapred.JobClient:     Lowest percentage of graph in memory so far (out-of-core)=100
+23/04/20 17:01:33 INFO mapred.JobClient:   FileSystemCounters
+23/04/20 17:01:33 INFO mapred.JobClient:     HDFS_BYTES_READ=50650071
+23/04/20 17:01:33 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=111976
+23/04/20 17:01:33 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=3382256
+23/04/20 17:01:33 INFO mapred.JobClient:   Job Counters 
+23/04/20 17:01:33 INFO mapred.JobClient:     Launched map tasks=2
+23/04/20 17:01:33 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+23/04/20 17:01:33 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/04/20 17:01:33 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=67334
+23/04/20 17:01:33 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/04/20 17:01:33 INFO mapred.JobClient:   File Output Format Counters 
+23/04/20 17:01:33 INFO mapred.JobClient:     Bytes Written=0
+Warning: $HADOOP_HOME is deprecated.
+
+23/04/20 17:01:40 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+23/04/20 17:01:40 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+23/04/20 17:01:40 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 1, old value = 4)
+23/04/20 17:01:41 INFO job.GiraphJob: Tracking URL: http://ic057:50030/jobdetails.jsp?jobid=job_202304191742_0171
+23/04/20 17:01:41 INFO job.GiraphJob: Waiting for resources... Job will start only when it gets all 2 mappers
+23/04/20 17:02:18 INFO job.HaltApplicationUtils$DefaultHaltInstructionsWriter: writeHaltInstructions: To halt after next superstep execute: 'bin/halt-application --zkServer ic058:22181 --zkNode /_hadoopBsp/job_202304191742_0171/_haltComputation'
+23/04/20 17:02:18 INFO mapred.JobClient: Running job: job_202304191742_0171
+23/04/20 17:02:19 INFO mapred.JobClient:  map 100% reduce 0%
+23/04/20 17:03:10 INFO mapred.JobClient: Job complete: job_202304191742_0171
+23/04/20 17:03:10 INFO mapred.JobClient: Counters: 95
+23/04/20 17:03:10 INFO mapred.JobClient:   Map-Reduce Framework
+23/04/20 17:03:10 INFO mapred.JobClient:     Spilled Records=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=14782746624
+23/04/20 17:03:10 INFO mapred.JobClient:     Map input records=2
+23/04/20 17:03:10 INFO mapred.JobClient:     SPLIT_RAW_BYTES=88
+23/04/20 17:03:10 INFO mapred.JobClient:     Map output records=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Physical memory (bytes) snapshot=4217147392
+23/04/20 17:03:10 INFO mapred.JobClient:     CPU time spent (ms)=2154130
+23/04/20 17:03:10 INFO mapred.JobClient:     Total committed heap usage (bytes)=4887937024
+23/04/20 17:03:10 INFO mapred.JobClient:   Zookeeper halt node
+23/04/20 17:03:10 INFO mapred.JobClient:     /_hadoopBsp/job_202304191742_0171/_haltComputation=0
+23/04/20 17:03:10 INFO mapred.JobClient:   Zookeeper server:port
+23/04/20 17:03:10 INFO mapred.JobClient:     ic058:22181=0
+23/04/20 17:03:10 INFO mapred.JobClient:   Giraph Timers
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 5 EpidemicExampleClock (ms)=1025
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 31 EpidemicExampleClock (ms)=47
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 39 EpidemicExampleClock (ms)=45
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 20 EpidemicExampleClock (ms)=439
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 28 EpidemicExampleClock (ms)=48
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 17 EpidemicExampleClock (ms)=1532
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 42 EpidemicExampleClock (ms)=45
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 6 EpidemicExampleClock (ms)=2136
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 32 EpidemicExampleClock (ms)=43
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 21 EpidemicExampleClock (ms)=152
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 29 EpidemicExampleClock (ms)=46
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 18 EpidemicExampleClock (ms)=896
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 10 EpidemicExampleClock (ms)=5348
+23/04/20 17:03:10 INFO mapred.JobClient:     Input superstep (ms)=12155
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 43 EpidemicExampleClock (ms)=45
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 7 EpidemicExampleClock (ms)=3358
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 33 EpidemicExampleClock (ms)=45
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 40 EpidemicExampleClock (ms)=43
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 48 EpidemicExampleClock (ms)=52
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 26 EpidemicExampleClock (ms)=50
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 11 EpidemicExampleClock (ms)=5606
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 8 EpidemicExampleClock (ms)=4137
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 34 EpidemicExampleClock (ms)=42
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 41 EpidemicExampleClock (ms)=45
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 49 EpidemicExampleClock (ms)=46
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 0 EpidemicExampleClock (ms)=713
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 27 EpidemicExampleClock (ms)=48
+23/04/20 17:03:10 INFO mapred.JobClient:     Total (ms)=74490
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 12 EpidemicExampleClock (ms)=5463
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 19 EpidemicExampleClock (ms)=527
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 9 EpidemicExampleClock (ms)=4563
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 35 EpidemicExampleClock (ms)=60
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 1 EpidemicExampleClock (ms)=384
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 24 EpidemicExampleClock (ms)=57
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 46 EpidemicExampleClock (ms)=44
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 13 EpidemicExampleClock (ms)=5128
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 36 EpidemicExampleClock (ms)=41
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 25 EpidemicExampleClock (ms)=53
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 50 EpidemicExampleClock (ms)=89
+23/04/20 17:03:10 INFO mapred.JobClient:     Initialize (ms)=4469
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 47 EpidemicExampleClock (ms)=44
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 14 EpidemicExampleClock (ms)=4105
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 2 EpidemicExampleClock (ms)=326
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 37 EpidemicExampleClock (ms)=50
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 3 EpidemicExampleClock (ms)=252
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 44 EpidemicExampleClock (ms)=54
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 15 EpidemicExampleClock (ms)=3123
+23/04/20 17:03:10 INFO mapred.JobClient:     Shutdown (ms)=9074
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 22 EpidemicExampleClock (ms)=85
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 4 EpidemicExampleClock (ms)=231
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 30 EpidemicExampleClock (ms)=45
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 38 EpidemicExampleClock (ms)=48
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 45 EpidemicExampleClock (ms)=49
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 16 EpidemicExampleClock (ms)=2310
+23/04/20 17:03:10 INFO mapred.JobClient:     Setup (ms)=30
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep 23 EpidemicExampleClock (ms)=59
+23/04/20 17:03:10 INFO mapred.JobClient:   VERTEX input
+23/04/20 17:03:10 INFO mapred.JobClient:     100.00% done time (ms)=12021
+23/04/20 17:03:10 INFO mapred.JobClient:     99.00% done time (ms)=8346
+23/04/20 17:03:10 INFO mapred.JobClient:   File Input Format Counters 
+23/04/20 17:03:10 INFO mapred.JobClient:     Bytes Read=0
+23/04/20 17:03:10 INFO mapred.JobClient:   Netty counters
+23/04/20 17:03:10 INFO mapred.JobClient:     Network requests resent for channel failure=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Network requests resent for timeout=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Network requests resent for connection or request failure=0
+23/04/20 17:03:10 INFO mapred.JobClient:   Giraph Stats
+23/04/20 17:03:10 INFO mapred.JobClient:     Aggregate bytes stored to local disks (out-of-core)=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Aggregate finished vertices=100001
+23/04/20 17:03:10 INFO mapred.JobClient:     Aggregate edges=20095317
+23/04/20 17:03:10 INFO mapred.JobClient:     Current master task partition=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Superstep=51
+23/04/20 17:03:10 INFO mapred.JobClient:     Aggregate sent message bytes=1371875746
+23/04/20 17:03:10 INFO mapred.JobClient:     Aggregate vertices=100001
+23/04/20 17:03:10 INFO mapred.JobClient:     Aggregate bytes loaded from local disks (out-of-core)=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Sent messages=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Sent message bytes=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Current workers=1
+23/04/20 17:03:10 INFO mapred.JobClient:     Last checkpointed superstep=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Aggregate sent messages=85642507
+23/04/20 17:03:10 INFO mapred.JobClient:     Lowest percentage of graph in memory so far (out-of-core)=100
+23/04/20 17:03:10 INFO mapred.JobClient:   FileSystemCounters
+23/04/20 17:03:10 INFO mapred.JobClient:     HDFS_BYTES_READ=201315647
+23/04/20 17:03:10 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=111978
+23/04/20 17:03:10 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=6775585
+23/04/20 17:03:10 INFO mapred.JobClient:   Job Counters 
+23/04/20 17:03:10 INFO mapred.JobClient:     Launched map tasks=2
+23/04/20 17:03:10 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+23/04/20 17:03:10 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/04/20 17:03:10 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=157887
+23/04/20 17:03:10 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/04/20 17:03:10 INFO mapred.JobClient:   File Output Format Counters 
+23/04/20 17:03:10 INFO mapred.JobClient:     Bytes Written=0
