@@ -36,7 +36,7 @@ import org.apache.giraph.examples.utils.DoubleArrayWritable;
 import org.apache.commons.math3.distribution.GammaDistribution;
 
 @Algorithm(
-    name = "Epidemic example (flat)",
+    name = "Epidemic example",
     description = "Simulate the epidemic"
 )
 public class EpidemicExampleClock extends BasicComputation<
@@ -44,7 +44,7 @@ public class EpidemicExampleClock extends BasicComputation<
   private static final Logger LOG =
       Logger.getLogger(EpidemicExampleClock.class);
 
-  public static final int cfreq = 30;
+  public static final int cfreq = 1;
   
     // Extended SIR model
     public static final int Susceptible = 0;
@@ -175,22 +175,8 @@ public class EpidemicExampleClock extends BasicComputation<
       Vertex<LongWritable, DoubleArrayWritable, FloatWritable> vertex,
       Iterable<DoubleWritable> messages) throws IOException {
       Random r = new Random();
-        // clock
-      if (vertex.getId().get() == 0) {
-        if (getSuperstep() < 50){
-            sendMessage(vertex.getId(), new DoubleWritable(-1));
-            for (DoubleWritable m: messages){
-                m.get();
-            }
 
-            // if (getSuperstep() %5 ==0) {
-            for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
-                sendMessage(edge.getTargetVertexId(), new DoubleWritable(-1));
-            }
-            // }
-        }
-      } else {
-        if (getSuperstep() == 0) {
+      if (getSuperstep() == 0) {
         // Initialize agents
         // (age, symptomatic, health, vulnerability, daysInfected)
             DoubleWritable agentStates[] = new DoubleWritable[5];  
@@ -199,22 +185,22 @@ public class EpidemicExampleClock extends BasicComputation<
             agentStates[0] = new DoubleWritable(age);
             
             if (r.nextBoolean()) {
-            agentStates[1] = new DoubleWritable(0); 
+              agentStates[1] = new DoubleWritable(0); 
             } else {
-            agentStates[1] = new DoubleWritable(1);
+              agentStates[1] = new DoubleWritable(1);
             }
             // health
             if (r.nextInt(100) ==0) {
-            // infectious, seed infectious patients 
-            agentStates[2] = new DoubleWritable(2);
+              // infectious, seed infectious patients 
+              agentStates[2] = new DoubleWritable(2);
             } else { 
-            agentStates[2] = new DoubleWritable(0);
+              agentStates[2] = new DoubleWritable(0);
             }
             // vulnerability
             if (age > 60) {
-            agentStates[3] = new DoubleWritable(1); 
+              agentStates[3] = new DoubleWritable(1); 
             } else {
-            agentStates[3] = new DoubleWritable(0);
+              agentStates[3] = new DoubleWritable(0);
             }
             agentStates[4] = new DoubleWritable(0);
 
@@ -224,17 +210,30 @@ public class EpidemicExampleClock extends BasicComputation<
 
             vertex.setValue(new DoubleArrayWritable(agentStates));
         }
-    
+                
+        // clock
+      if (vertex.getId().get() == 0) {
+        if (getSuperstep() < 50){
+            sendMessage(vertex.getId(), new DoubleWritable(-1));
+            for (DoubleWritable m: messages){
+                m.get();
+            }
+
+            for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
+                sendMessage(edge.getTargetVertexId(), new DoubleWritable(-1));
+            }
+        }
+      } else { 
+        DoubleWritable agentStates[] = (DoubleWritable [])vertex.getValue().get();
+        int age = (int)((DoubleWritable)agentStates[0]).get();
+        int symptomatic = (int)((DoubleWritable)agentStates[1]).get();
+        int health = (int)((DoubleWritable)agentStates[2]).get();
+        int vulnerability = (int)((DoubleWritable)agentStates[3]).get();
+        int daysInfected = (int)((DoubleWritable)agentStates[4]).get();
+           
         // tune comm. frequency  
         if (getSuperstep() < 50){
           // if (getSuperstep()%5 ==1) {
-            DoubleWritable agentStates[] = (DoubleWritable [])vertex.getValue().get();
-            int age = (int)((DoubleWritable)agentStates[0]).get();
-            int symptomatic = (int)((DoubleWritable)agentStates[0]).get();
-            int health = (int)((DoubleWritable)agentStates[2]).get();
-            int vulnerability = (int)((DoubleWritable)agentStates[3]).get();
-            int daysInfected = (int)((DoubleWritable)agentStates[4]).get();
-
             int totalMsg = 0;
             for (DoubleWritable m : messages) {
                 // Discard the message from clock
@@ -253,41 +252,32 @@ public class EpidemicExampleClock extends BasicComputation<
             }
 
             if (LOG.isDebugEnabled()) {
-            LOG.debug("Vertex " + vertex.getId() + " is " + health + " in " + getSuperstep() + " receives " + totalMsg + " messages \n");
+              LOG.debug("Vertex " + vertex.getId() + " is " + health + " in " + getSuperstep() + " receives " + totalMsg + " messages \n");
             }
 
             // if (LOG.isDebugEnabled()) {
             //   LOG.debug("Vertex " + vertex.getId() + " is " + health + " in " + getSuperstep() + " receives " + totalMsg + " messages \n");
             // }
 
-            // if (health != Deceased) {
-                // Meet with contacts 
-
-            double selfRisk = infectiousness(health, symptomatic);                    
-            if (health == Infectious) {
-              for (int i=0; i<cfreq; i++) {
-                for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
-                    // double selfRisk = 0;
-                    sendMessage(edge.getTargetVertexId(), new DoubleWritable(selfRisk));
+            if (health != Deceased) {
+              if (health == Infectious) {
+                for (int i=0; i<cfreq; i++) {
+                  for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
+                    double selfRisk = infectiousness(health, symptomatic);                    
+                      sendMessage(edge.getTargetVertexId(), new DoubleWritable(selfRisk));
+                  }
                 }
               }
-              // for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
-              //     for (int i=0; i<cfreq; i++) {
-              //       // double selfRisk = 0;
-              //       sendMessage(edge.getTargetVertexId(), new DoubleWritable(selfRisk));
-              //     }
-              // }
-            }
 
-            if ((health != Susceptible) && (health != Recover)) {
-                if (daysInfected >= stateDuration(health)) {
-                    health = change(health, vulnerability);
-                    daysInfected = 0;
-                } else {
-                    daysInfected = daysInfected + 1;
-                }
-            }
-            // } 
+              if ((health != Susceptible) && (health != Recover)) {
+                  if (daysInfected >= stateDuration(health)) {
+                      health = change(health, vulnerability);
+                      daysInfected = 0;
+                  } else {
+                      daysInfected = daysInfected + 1;
+                  }
+              }
+            } 
 
             agentStates[0] = new DoubleWritable(age);
             agentStates[1] = new DoubleWritable(symptomatic);
@@ -297,9 +287,8 @@ public class EpidemicExampleClock extends BasicComputation<
             agentStates[3] = new DoubleWritable(vulnerability);
             agentStates[4] = new DoubleWritable(daysInfected);
             vertex.setValue(new DoubleArrayWritable(agentStates));
-            //  }
         }  
-      }   
+      }
     vertex.voteToHalt();
   }
 }

@@ -39,13 +39,11 @@ import org.apache.giraph.examples.utils.DoubleArrayWritable;
 )
 public class GameOfLifeExampleClock extends BasicComputation<
     LongWritable, DoubleWritable, FloatWritable, DoubleWritable> {
-  /** The shortest paths id */
-  // public static final LongConfOption CLOCK_ID =
-  //     new LongConfOption("SimpleShortestPathsVertex.sourceId", 1,
-  //         "The shortest paths id");
-  /** Class logger */
   private static final Logger LOG =
       Logger.getLogger(GameOfLifeExampleClock.class);
+
+  private static final int cfreq = 1;
+  private static final int cinterval = 1;
 
   @Override
   public void compute(
@@ -60,11 +58,10 @@ public class GameOfLifeExampleClock extends BasicComputation<
           m.get();
         }
         
-        if ((getSuperstep() % 5) ==0) {
-          for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
-            sendMessage(edge.getTargetVertexId(), new DoubleWritable(-1));
-          }
+        for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
+          sendMessage(edge.getTargetVertexId(), new DoubleWritable(-1));
         }
+        
       }
     } else {
       if (getSuperstep() == 0) {
@@ -78,7 +75,7 @@ public class GameOfLifeExampleClock extends BasicComputation<
   
       // tune comm. frequency  
       if (getSuperstep() < 200){
-        if ((getSuperstep() % 5) ==1) {
+        // vertex should receive the heartbeat message in the following round
           double alivedNeighbors = 0d;
           for (DoubleWritable m : messages) {
             if (m.get()!=-1){
@@ -91,10 +88,12 @@ public class GameOfLifeExampleClock extends BasicComputation<
             vertex.setValue(new DoubleWritable(1.0));
           }
 
-          for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
-            double distance = vertex.getValue().get();
-            sendMessage(edge.getTargetVertexId(), new DoubleWritable(distance));
-          }
+          for (int j=0; j < cfreq; j++) {
+            double alive = vertex.getValue().get();
+            for (Edge<LongWritable, FloatWritable> edge : vertex.getEdges()) {
+              sendMessage(edge.getTargetVertexId(), new DoubleWritable(alive));
+            }
+          
         }
       }
     }
